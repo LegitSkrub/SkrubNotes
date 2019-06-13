@@ -1,0 +1,51 @@
+#+===========================================================+
+#|   _____ _               _       _   _       _             |
+#|  / ____| |             | |     | \ | |     | |            |
+#| | (___ | | ___ __ _   _| |__   |  \| | ___ | |_ ___  ___  |
+#|  \___ \| |/ / '__| | | | '_ \  | . ` |/ _ \| __/ _ \/ __| |
+#|  ____) |   <| |  | |_| | |_) | | |\  | (_) | ||  __/\__ \ |
+#| |_____/|_|\_\_|   \__,_|_.__/  |_| \_|\___/ \__\___||___/ |
+#|                                                           |
+#+===========================================================+
+
+#Prefix shown when SkrubNotes related commands are ran.
+prefix: '&8[&6Skrub&bNotes&8] '
+
+#Message shown when the configuration file is reloaded.
+reload_msg: '&aconfig.yml has been reloaded!'
+
+#Message shown when a user does not have permission to run a command.
+noperm: '&cYou do not have permission to use that command!'
+
+#Message shown when there is an error in the command syntax.
+synerror: '&cInvalid syntax! Please use the following syntax: '
+
+#Message shown when a user does not have enough money to withdraw.
+notenough: '&cYou do not have enough money to withdraw that amount.'
+
+#Mininum amount of a bank note. Set to '0' if none.
+minimum: '10000'
+
+#Message shown when the amount withdrawn is below the minimum amount set.
+belowmin: '&cYou must withdraw atleast ${minimum}!'
+
+#Message shown when a player withdraws money.
+withdraw: '&eYou withdrew {amount}!'
+msgenabled: true
+
+#This is the currency that will be shown on bank notes and in messages.
+#This does not work quite properly yet.
+currency: '$'
+
+#Message shown when a player deposits a note.
+deposit: '&aYou deposited a note worth {amount}'
+
+#Change the values below to change the name or lore of the note.
+#Placeholders:
+#{player} - displays the name of the player who withdrew the note.
+#{value} - displays the amount the note is worth. This placeholder is ABSOLUTELY NECESSARY.
+note:
+  name: '&6&lSkrub Note &7[Right Click]'
+  lore:
+    - '&eValue - {value}'
+    - '&cFrom - {player}'

@@ -1,0 +1,11 @@
+name: SkrubNotes
+main: me.skrub.notes.Main
+author: LegitSkrub
+dependency: [Vault]
+version: 1.0
+commands:
+   withdraw:
+     description: Withdraw your money into a note
+   skrubnotes:
+     description: Reload the SkrubNotes config.yml file.
+     aliases: [sn]
