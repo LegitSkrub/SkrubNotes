@@ -19,9 +19,11 @@ public class skrubnotes implements CommandExecutor{
 				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&bVersion: &c" + Main.plugin.getDescription().getVersion()));
 				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&bMade by: &c" + Main.plugin.getDescription().getAuthors()));
 			} else if(args.length == 1) {
-				if(args[0].equals("reload")) {
-					Main.plugin.reloadConfig();
-					sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("prefix") + Main.plugin.getConfig().getString("reload_msg")));
+				if(sender.hasPermission("skrubnotes.skrub.reload")) {
+					if(args[0].equals("reload")) {
+						Main.plugin.reloadConfig();
+						sender.sendMessage(ChatColor.translateAlternateColorCodes('&', Main.plugin.getConfig().getString("prefix") + Main.plugin.getConfig().getString("reload_msg")));
+					}
 				}
 			} else {
 				sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&b---------------[&6&lSkrubNotes&b]---------------"));
